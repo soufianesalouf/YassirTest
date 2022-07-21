@@ -22,6 +22,11 @@
 		728557E22889F32D00519355 /* MovieDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728557E12889F32D00519355 /* MovieDetailsViewModel.swift */; };
 		728557E52889F47600519355 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728557E42889F47600519355 /* AppCoordinator.swift */; };
 		728557E82889F55700519355 /* Storyboardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728557E72889F55700519355 /* Storyboardable.swift */; };
+		728557EA2889FBA100519355 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728557E92889FBA100519355 /* BaseModel.swift */; };
+		728557ED288A018800519355 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728557EC288A018800519355 /* Movie.swift */; };
+		728557EF288A02E900519355 /* TrendingMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728557EE288A02E900519355 /* TrendingMovies.swift */; };
+		728557F1288A03D300519355 /* Posters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728557F0288A03D300519355 /* Posters.swift */; };
+		728557F3288A046500519355 /* Poster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728557F2288A046500519355 /* Poster.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,11 @@
 		728557E12889F32D00519355 /* MovieDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewModel.swift; sourceTree = "<group>"; };
 		728557E42889F47600519355 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		728557E72889F55700519355 /* Storyboardable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboardable.swift; sourceTree = "<group>"; };
+		728557E92889FBA100519355 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		728557EC288A018800519355 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		728557EE288A02E900519355 /* TrendingMovies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingMovies.swift; sourceTree = "<group>"; };
+		728557F0288A03D300519355 /* Posters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posters.swift; sourceTree = "<group>"; };
+		728557F2288A046500519355 /* Poster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poster.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +108,7 @@
 				728557CE2889EFF200519355 /* Application Delegates */,
 				728557D72889F1CD00519355 /* Commun */,
 				728557E32889F45300519355 /* Coordinators */,
+				728557EB288A016600519355 /* Models */,
 				728557D02889F02700519355 /* Modules */,
 				728557E62889F52700519355 /* Protocols */,
 				728557D32889F07300519355 /* Ressources */,
@@ -195,6 +206,7 @@
 		728557D82889F1DB00519355 /* Base Elements */ = {
 			isa = PBXGroup;
 			children = (
+				728557E92889FBA100519355 /* BaseModel.swift */,
 				728557D92889F1EC00519355 /* BaseViewController.swift */,
 				728557DB2889F20D00519355 /* BaseViewModel.swift */,
 			);
@@ -215,6 +227,17 @@
 				728557E72889F55700519355 /* Storyboardable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		728557EB288A016600519355 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				728557EC288A018800519355 /* Movie.swift */,
+				728557F2288A046500519355 /* Poster.swift */,
+				728557F0288A03D300519355 /* Posters.swift */,
+				728557EE288A02E900519355 /* TrendingMovies.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,8 +344,13 @@
 			files = (
 				728557E22889F32D00519355 /* MovieDetailsViewModel.swift in Sources */,
 				728557A12889EDF700519355 /* TrendingMoviesViewController.swift in Sources */,
+				728557F1288A03D300519355 /* Posters.swift in Sources */,
+				728557ED288A018800519355 /* Movie.swift in Sources */,
+				728557EA2889FBA100519355 /* BaseModel.swift in Sources */,
+				728557F3288A046500519355 /* Poster.swift in Sources */,
 				728557DC2889F20D00519355 /* BaseViewModel.swift in Sources */,
 				728557DA2889F1EC00519355 /* BaseViewController.swift in Sources */,
+				728557EF288A02E900519355 /* TrendingMovies.swift in Sources */,
 				728557E02889F31400519355 /* MovieDetailsViewController.swift in Sources */,
 				7285579D2889EDF700519355 /* AppDelegate.swift in Sources */,
 				728557E52889F47600519355 /* AppCoordinator.swift in Sources */,
