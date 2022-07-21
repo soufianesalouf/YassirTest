@@ -11,7 +11,7 @@
         <!--Trending Movies View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="TrendingMoviesViewController" customModule="YassirTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TrendingMoviesViewController" id="BYZ-38-t0r" customClass="TrendingMoviesViewController" customModule="YassirTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,12 +22,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IXp-nY-qge">
+                                <rect key="frame" x="151.5" y="488.5" width="111" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Movie Details"/>
+                                <connections>
+                                    <action selector="movieDetailsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gUc-UM-WWl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="dD4-h0-XRg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4cM-gW-r9y"/>
                             <constraint firstItem="dD4-h0-XRg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="R0K-wE-e4I"/>
+                            <constraint firstItem="IXp-nY-qge" firstAttribute="top" secondItem="dD4-h0-XRg" secondAttribute="bottom" constant="30" id="Vwe-af-3tl"/>
+                            <constraint firstItem="IXp-nY-qge" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rQg-ba-H9l"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -57,6 +67,9 @@
                             <constraint firstItem="4Ye-Bh-QwW" firstAttribute="centerX" secondItem="WLm-fC-i6d" secondAttribute="centerX" id="A8G-An-pSm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="4Ye-Bh-QwW" id="IiW-f3-Ty2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Izw-ls-4fT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

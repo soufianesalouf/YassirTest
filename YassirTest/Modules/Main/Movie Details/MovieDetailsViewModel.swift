@@ -7,4 +7,16 @@
 
 import Foundation
 
-class MovieDetailsViewModel: BaseViewModel { }
+class MovieDetailsViewModel: BaseViewModel {
+    
+    // MARK: - Properties
+    
+    let movieID: Int
+    
+    // MARK: - Init
+    
+    init(movieID: Int) {
+        self.movieID = movieID
+    }
+    
+}

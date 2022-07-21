@@ -9,6 +9,10 @@ import UIKit
 
 class MovieDetailsViewController: BaseViewController {
     
+    // MARK: - Views
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    
     // MARK: - Properties
     
     var viewModel: MovieDetailsViewModel!
@@ -17,6 +21,7 @@ class MovieDetailsViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        titleLabel.text = "Details for movie with id: \(viewModel.movieID)"
     }
     
 }

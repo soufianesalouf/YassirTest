@@ -20,17 +20,12 @@
 		728557DE2889F26D00519355 /* TrendingMoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728557DD2889F26D00519355 /* TrendingMoviesViewModel.swift */; };
 		728557E02889F31400519355 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728557DF2889F31400519355 /* MovieDetailsViewController.swift */; };
 		728557E22889F32D00519355 /* MovieDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728557E12889F32D00519355 /* MovieDetailsViewModel.swift */; };
+		728557E52889F47600519355 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728557E42889F47600519355 /* AppCoordinator.swift */; };
+		728557E82889F55700519355 /* Storyboardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728557E72889F55700519355 /* Storyboardable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		728557B02889EDFA00519355 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 728557912889EDF700519355 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 728557982889EDF700519355;
-			remoteInfo = YassirTest;
-		};
-		728557BA2889EDFA00519355 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 728557912889EDF700519355 /* Project object */;
 			proxyType = 1;
@@ -50,13 +45,14 @@
 		728557AA2889EDFA00519355 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		728557AF2889EDFA00519355 /* YassirTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YassirTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		728557B32889EDFA00519355 /* YassirTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YassirTestTests.swift; sourceTree = "<group>"; };
-		728557B92889EDFA00519355 /* YassirTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YassirTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		728557CC2889EFDF00519355 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		728557D92889F1EC00519355 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		728557DB2889F20D00519355 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		728557DD2889F26D00519355 /* TrendingMoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingMoviesViewModel.swift; sourceTree = "<group>"; };
 		728557DF2889F31400519355 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 		728557E12889F32D00519355 /* MovieDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewModel.swift; sourceTree = "<group>"; };
+		728557E42889F47600519355 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		728557E72889F55700519355 /* Storyboardable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboardable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,13 +64,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		728557AC2889EDFA00519355 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		728557B62889EDFA00519355 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -98,7 +87,6 @@
 			children = (
 				728557992889EDF700519355 /* YassirTest.app */,
 				728557AF2889EDFA00519355 /* YassirTestTests.xctest */,
-				728557B92889EDFA00519355 /* YassirTestUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,7 +97,9 @@
 				728557CC2889EFDF00519355 /* README.md */,
 				728557CE2889EFF200519355 /* Application Delegates */,
 				728557D72889F1CD00519355 /* Commun */,
+				728557E32889F45300519355 /* Coordinators */,
 				728557D02889F02700519355 /* Modules */,
+				728557E62889F52700519355 /* Protocols */,
 				728557D32889F07300519355 /* Ressources */,
 				728557D42889F08C00519355 /* Supporting Files */,
 			);
@@ -211,6 +201,22 @@
 			path = "Base Elements";
 			sourceTree = "<group>";
 		};
+		728557E32889F45300519355 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				728557E42889F47600519355 /* AppCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		728557E62889F52700519355 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				728557E72889F55700519355 /* Storyboardable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -249,24 +255,6 @@
 			productReference = 728557AF2889EDFA00519355 /* YassirTestTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		728557B82889EDFA00519355 /* YassirTestUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 728557C92889EDFA00519355 /* Build configuration list for PBXNativeTarget "YassirTestUITests" */;
-			buildPhases = (
-				728557B52889EDFA00519355 /* Sources */,
-				728557B62889EDFA00519355 /* Frameworks */,
-				728557B72889EDFA00519355 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				728557BB2889EDFA00519355 /* PBXTargetDependency */,
-			);
-			name = YassirTestUITests;
-			productName = YassirTestUITests;
-			productReference = 728557B92889EDFA00519355 /* YassirTestUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -281,10 +269,6 @@
 						CreatedOnToolsVersion = 13.4.1;
 					};
 					728557AE2889EDFA00519355 = {
-						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = 728557982889EDF700519355;
-					};
-					728557B82889EDFA00519355 = {
 						CreatedOnToolsVersion = 13.4.1;
 						TestTargetID = 728557982889EDF700519355;
 					};
@@ -305,7 +289,6 @@
 			targets = (
 				728557982889EDF700519355 /* YassirTest */,
 				728557AE2889EDFA00519355 /* YassirTestTests */,
-				728557B82889EDFA00519355 /* YassirTestUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -329,13 +312,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		728557B72889EDFA00519355 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -349,7 +325,9 @@
 				728557DA2889F1EC00519355 /* BaseViewController.swift in Sources */,
 				728557E02889F31400519355 /* MovieDetailsViewController.swift in Sources */,
 				7285579D2889EDF700519355 /* AppDelegate.swift in Sources */,
+				728557E52889F47600519355 /* AppCoordinator.swift in Sources */,
 				728557DE2889F26D00519355 /* TrendingMoviesViewModel.swift in Sources */,
+				728557E82889F55700519355 /* Storyboardable.swift in Sources */,
 				7285579F2889EDF700519355 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,13 +340,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		728557B52889EDFA00519355 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -376,11 +347,6 @@
 			isa = PBXTargetDependency;
 			target = 728557982889EDF700519355 /* YassirTest */;
 			targetProxy = 728557B02889EDFA00519355 /* PBXContainerItemProxy */;
-		};
-		728557BB2889EDFA00519355 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 728557982889EDF700519355 /* YassirTest */;
-			targetProxy = 728557BA2889EDFA00519355 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -610,40 +576,6 @@
 			};
 			name = Release;
 		};
-		728557CA2889EDFA00519355 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.salouf.YassirTestUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = YassirTest;
-			};
-			name = Debug;
-		};
-		728557CB2889EDFA00519355 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.salouf.YassirTestUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = YassirTest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -670,15 +602,6 @@
 			buildConfigurations = (
 				728557C72889EDFA00519355 /* Debug */,
 				728557C82889EDFA00519355 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		728557C92889EDFA00519355 /* Build configuration list for PBXNativeTarget "YassirTestUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				728557CA2889EDFA00519355 /* Debug */,
-				728557CB2889EDFA00519355 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
