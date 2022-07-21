@@ -35,6 +35,9 @@
 		72855803288A0E8500519355 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72855802288A0E8500519355 /* APIService.swift */; };
 		72E014F6288A105600F98319 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E014F5288A105600F98319 /* APIClient.swift */; };
 		72E014F8288A110700F98319 /* NoContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E014F7288A110700F98319 /* NoContent.swift */; };
+		72E014FB288A199C00F98319 /* Movies.json in Resources */ = {isa = PBXBuildFile; fileRef = 72E014FA288A199B00F98319 /* Movies.json */; };
+		72E014FE288A1A0600F98319 /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E014FD288A1A0600F98319 /* APIClientTests.swift */; };
+		72E01501288A1B2300F98319 /* XCTestCase+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E01500288A1B2300F98319 /* XCTestCase+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +82,9 @@
 		72855802288A0E8500519355 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		72E014F5288A105600F98319 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		72E014F7288A110700F98319 /* NoContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoContent.swift; sourceTree = "<group>"; };
+		72E014FA288A199B00F98319 /* Movies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Movies.json; sourceTree = "<group>"; };
+		72E014FD288A1A0600F98319 /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
+		72E01500288A1B2300F98319 /* XCTestCase+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,7 +144,9 @@
 		728557B22889EDFA00519355 /* YassirTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				728557B32889EDFA00519355 /* YassirTestTests.swift */,
+				72E014FF288A1B1400F98319 /* Extensions */,
+				72E014F9288A196700F98319 /* Stubs */,
+				72E014FC288A19E000F98319 /* Test Cases */,
 			);
 			path = YassirTestTests;
 			sourceTree = "<group>";
@@ -296,6 +304,31 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		72E014F9288A196700F98319 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				72E014FA288A199B00F98319 /* Movies.json */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
+		72E014FC288A19E000F98319 /* Test Cases */ = {
+			isa = PBXGroup;
+			children = (
+				72E014FD288A1A0600F98319 /* APIClientTests.swift */,
+				728557B32889EDFA00519355 /* YassirTestTests.swift */,
+			);
+			path = "Test Cases";
+			sourceTree = "<group>";
+		};
+		72E014FF288A1B1400F98319 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				72E01500288A1B2300F98319 /* XCTestCase+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -388,6 +421,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72E014FB288A199C00F98319 /* Movies.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,7 +462,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72E01501288A1B2300F98319 /* XCTestCase+Extension.swift in Sources */,
 				728557B42889EDFA00519355 /* YassirTestTests.swift in Sources */,
+				72E014FE288A1A0600F98319 /* APIClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
