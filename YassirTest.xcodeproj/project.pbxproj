@@ -27,6 +27,14 @@
 		728557EF288A02E900519355 /* TrendingMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728557EE288A02E900519355 /* TrendingMovies.swift */; };
 		728557F1288A03D300519355 /* Posters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728557F0288A03D300519355 /* Posters.swift */; };
 		728557F3288A046500519355 /* Poster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728557F2288A046500519355 /* Poster.swift */; };
+		728557F7288A0B4300519355 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728557F6288A0B4300519355 /* HTTPMethod.swift */; };
+		728557F9288A0B5C00519355 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728557F8288A0B5C00519355 /* APIError.swift */; };
+		728557FB288A0BBD00519355 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728557FA288A0BBD00519355 /* APIEndpoint.swift */; };
+		728557FD288A0D9400519355 /* TypeAliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728557FC288A0D9400519355 /* TypeAliases.swift */; };
+		72855800288A0DDB00519355 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728557FF288A0DDB00519355 /* Environment.swift */; };
+		72855803288A0E8500519355 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72855802288A0E8500519355 /* APIService.swift */; };
+		72E014F6288A105600F98319 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E014F5288A105600F98319 /* APIClient.swift */; };
+		72E014F8288A110700F98319 /* NoContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E014F7288A110700F98319 /* NoContent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +71,14 @@
 		728557EE288A02E900519355 /* TrendingMovies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingMovies.swift; sourceTree = "<group>"; };
 		728557F0288A03D300519355 /* Posters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posters.swift; sourceTree = "<group>"; };
 		728557F2288A046500519355 /* Poster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poster.swift; sourceTree = "<group>"; };
+		728557F6288A0B4300519355 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		728557F8288A0B5C00519355 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		728557FA288A0BBD00519355 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
+		728557FC288A0D9400519355 /* TypeAliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAliases.swift; sourceTree = "<group>"; };
+		728557FF288A0DDB00519355 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		72855802288A0E8500519355 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		72E014F5288A105600F98319 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		72E014F7288A110700F98319 /* NoContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoContent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,9 +123,11 @@
 				728557CC2889EFDF00519355 /* README.md */,
 				728557CE2889EFF200519355 /* Application Delegates */,
 				728557D72889F1CD00519355 /* Commun */,
+				728557FE288A0DC600519355 /* Configuration */,
 				728557E32889F45300519355 /* Coordinators */,
 				728557EB288A016600519355 /* Models */,
 				728557D02889F02700519355 /* Modules */,
+				728557F4288A0B2600519355 /* Networking */,
 				728557E62889F52700519355 /* Protocols */,
 				728557D32889F07300519355 /* Ressources */,
 				728557D42889F08C00519355 /* Supporting Files */,
@@ -198,6 +216,7 @@
 		728557D72889F1CD00519355 /* Commun */ = {
 			isa = PBXGroup;
 			children = (
+				728557FC288A0D9400519355 /* TypeAliases.swift */,
 				728557D82889F1DB00519355 /* Base Elements */,
 			);
 			path = Commun;
@@ -233,11 +252,48 @@
 			isa = PBXGroup;
 			children = (
 				728557EC288A018800519355 /* Movie.swift */,
+				72E014F7288A110700F98319 /* NoContent.swift */,
 				728557F2288A046500519355 /* Poster.swift */,
 				728557F0288A03D300519355 /* Posters.swift */,
 				728557EE288A02E900519355 /* TrendingMovies.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		728557F4288A0B2600519355 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				72E014F5288A105600F98319 /* APIClient.swift */,
+				72855801288A0E7000519355 /* Protocols */,
+				728557F5288A0B2E00519355 /* Types */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		728557F5288A0B2E00519355 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				728557F6288A0B4300519355 /* HTTPMethod.swift */,
+				728557F8288A0B5C00519355 /* APIError.swift */,
+				728557FA288A0BBD00519355 /* APIEndpoint.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		728557FE288A0DC600519355 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				728557FF288A0DDB00519355 /* Environment.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		72855801288A0E7000519355 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				72855802288A0E8500519355 /* APIService.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,17 +399,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				728557E22889F32D00519355 /* MovieDetailsViewModel.swift in Sources */,
+				72E014F8288A110700F98319 /* NoContent.swift in Sources */,
+				72855803288A0E8500519355 /* APIService.swift in Sources */,
+				728557FB288A0BBD00519355 /* APIEndpoint.swift in Sources */,
 				728557A12889EDF700519355 /* TrendingMoviesViewController.swift in Sources */,
 				728557F1288A03D300519355 /* Posters.swift in Sources */,
+				72E014F6288A105600F98319 /* APIClient.swift in Sources */,
+				728557F9288A0B5C00519355 /* APIError.swift in Sources */,
 				728557ED288A018800519355 /* Movie.swift in Sources */,
 				728557EA2889FBA100519355 /* BaseModel.swift in Sources */,
+				728557FD288A0D9400519355 /* TypeAliases.swift in Sources */,
 				728557F3288A046500519355 /* Poster.swift in Sources */,
+				72855800288A0DDB00519355 /* Environment.swift in Sources */,
 				728557DC2889F20D00519355 /* BaseViewModel.swift in Sources */,
 				728557DA2889F1EC00519355 /* BaseViewController.swift in Sources */,
 				728557EF288A02E900519355 /* TrendingMovies.swift in Sources */,
 				728557E02889F31400519355 /* MovieDetailsViewController.swift in Sources */,
 				7285579D2889EDF700519355 /* AppDelegate.swift in Sources */,
 				728557E52889F47600519355 /* AppCoordinator.swift in Sources */,
+				728557F7288A0B4300519355 /* HTTPMethod.swift in Sources */,
 				728557DE2889F26D00519355 /* TrendingMoviesViewModel.swift in Sources */,
 				728557E82889F55700519355 /* Storyboardable.swift in Sources */,
 				7285579F2889EDF700519355 /* SceneDelegate.swift in Sources */,
