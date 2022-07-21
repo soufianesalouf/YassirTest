@@ -14,6 +14,7 @@
 		728557A62889EDFA00519355 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 728557A52889EDFA00519355 /* Assets.xcassets */; };
 		728557A92889EDFA00519355 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 728557A72889EDFA00519355 /* LaunchScreen.storyboard */; };
 		728557B42889EDFA00519355 /* YassirTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728557B32889EDFA00519355 /* YassirTestTests.swift */; };
+		728557CD2889EFE000519355 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 728557CC2889EFDF00519355 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		728557AF2889EDFA00519355 /* YassirTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YassirTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		728557B32889EDFA00519355 /* YassirTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YassirTestTests.swift; sourceTree = "<group>"; };
 		728557B92889EDFA00519355 /* YassirTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YassirTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		728557CC2889EFDF00519355 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,13 +96,11 @@
 		7285579B2889EDF700519355 /* YassirTest */ = {
 			isa = PBXGroup;
 			children = (
-				7285579C2889EDF700519355 /* AppDelegate.swift */,
-				7285579E2889EDF700519355 /* SceneDelegate.swift */,
-				728557A02889EDF700519355 /* ViewController.swift */,
-				728557A22889EDF700519355 /* Main.storyboard */,
-				728557A52889EDFA00519355 /* Assets.xcassets */,
-				728557A72889EDFA00519355 /* LaunchScreen.storyboard */,
-				728557AA2889EDFA00519355 /* Info.plist */,
+				728557CC2889EFDF00519355 /* README.md */,
+				728557CE2889EFF200519355 /* Application Delegates */,
+				728557D02889F02700519355 /* Modules */,
+				728557D32889F07300519355 /* Ressources */,
+				728557D42889F08C00519355 /* Supporting Files */,
 			);
 			path = YassirTest;
 			sourceTree = "<group>";
@@ -111,6 +111,73 @@
 				728557B32889EDFA00519355 /* YassirTestTests.swift */,
 			);
 			path = YassirTestTests;
+			sourceTree = "<group>";
+		};
+		728557CE2889EFF200519355 /* Application Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				7285579C2889EDF700519355 /* AppDelegate.swift */,
+				7285579E2889EDF700519355 /* SceneDelegate.swift */,
+			);
+			path = "Application Delegates";
+			sourceTree = "<group>";
+		};
+		728557D02889F02700519355 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				728557D22889F04400519355 /* Launch Screen */,
+				728557D12889F03D00519355 /* Main */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		728557D12889F03D00519355 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				728557A22889EDF700519355 /* Main.storyboard */,
+				728557D62889F0E300519355 /* Movie Details */,
+				728557D52889F0BC00519355 /* Trending Movies */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		728557D22889F04400519355 /* Launch Screen */ = {
+			isa = PBXGroup;
+			children = (
+				728557A72889EDFA00519355 /* LaunchScreen.storyboard */,
+			);
+			path = "Launch Screen";
+			sourceTree = "<group>";
+		};
+		728557D32889F07300519355 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				728557A52889EDFA00519355 /* Assets.xcassets */,
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
+		728557D42889F08C00519355 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				728557AA2889EDFA00519355 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		728557D52889F0BC00519355 /* Trending Movies */ = {
+			isa = PBXGroup;
+			children = (
+				728557A02889EDF700519355 /* ViewController.swift */,
+			);
+			path = "Trending Movies";
+			sourceTree = "<group>";
+		};
+		728557D62889F0E300519355 /* Movie Details */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Movie Details";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +286,7 @@
 			files = (
 				728557A92889EDFA00519355 /* LaunchScreen.storyboard in Resources */,
 				728557A62889EDFA00519355 /* Assets.xcassets in Resources */,
+				728557CD2889EFE000519355 /* README.md in Resources */,
 				728557A42889EDF700519355 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,7 +490,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = YassirTest/Info.plist;
+				INFOPLIST_FILE = "YassirTest/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -449,7 +517,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = YassirTest/Info.plist;
+				INFOPLIST_FILE = "YassirTest/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
