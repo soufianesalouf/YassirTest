@@ -27,6 +27,7 @@ class TrendingMoviesViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigationBar()
         setupTableView()
         setupBinding()
     }
@@ -63,6 +64,12 @@ class TrendingMoviesViewController: BaseViewController {
                 print("Error: \(error.localizedDescription)")
             }
             .store(in: &disposables)
+    }
+    
+    private func setupNavigationBar() {
+        let image = UIImage(named: "yassirSmallLogo.png")
+        let imageView = UIImageView(image: image)
+        self.navigationItem.titleView = imageView
     }
     
 }
