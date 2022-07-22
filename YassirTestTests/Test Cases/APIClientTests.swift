@@ -16,7 +16,7 @@ class APIClientTests: XCTestCase {
     private let apiClient = APIClient()
     private var disposables: Set<AnyCancellable> = []
 
-    // MARK: - Tests for Product List
+    // MARK: - Tests for online and offline cases
     
     func testMoviesOnline() throws {
         

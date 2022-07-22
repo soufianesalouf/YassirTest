@@ -11,6 +11,7 @@ struct Movie: BaseModel {
     
     // MARK: - Properties
     
+    let id: Int
     let name: String
     let releaseDate: String
     let posterPath: String
@@ -19,6 +20,7 @@ struct Movie: BaseModel {
     // MARK: - Coding Keys
     
     enum CodingKeys: String, CodingKey {
+        case id = "id"
         case name = "original_title"
         case releaseDate = "release_date"
         case posterPath = "poster_path"

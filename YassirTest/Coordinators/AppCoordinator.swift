@@ -31,7 +31,7 @@ class AppCoordinator {
         // Initiate and Configure Trending Movies View Controller
         let viewController =  TrendingMoviesViewController.instantiate()
         
-        viewController.viewModel = TrendingMoviesViewModel()
+        viewController.viewModel = TrendingMoviesViewModel(apiService: APIClient())
         viewController.didShowMovie = { [weak self] movieID in
             self?.showMovieDetails(for: movieID)
         }

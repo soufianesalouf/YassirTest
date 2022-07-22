@@ -16,30 +16,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TrendingMoviesViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dD4-h0-XRg">
-                                <rect key="frame" x="91" y="437.5" width="232" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IXp-nY-qge">
-                                <rect key="frame" x="151.5" y="488.5" width="111" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Movie Details"/>
-                                <connections>
-                                    <action selector="movieDetailsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gUc-UM-WWl"/>
-                                </connections>
-                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="C5v-w1-bz9">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="dD4-h0-XRg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4cM-gW-r9y"/>
-                            <constraint firstItem="dD4-h0-XRg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="R0K-wE-e4I"/>
-                            <constraint firstItem="IXp-nY-qge" firstAttribute="top" secondItem="dD4-h0-XRg" secondAttribute="bottom" constant="30" id="Vwe-af-3tl"/>
-                            <constraint firstItem="IXp-nY-qge" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rQg-ba-H9l"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="C5v-w1-bz9" secondAttribute="bottom" id="Dh1-kU-0HB"/>
+                            <constraint firstItem="C5v-w1-bz9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Hb4-z5-REt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="C5v-w1-bz9" secondAttribute="trailing" id="ZqV-os-rt6"/>
+                            <constraint firstItem="C5v-w1-bz9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rHK-cV-2wF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="C5v-w1-bz9" id="81i-IQ-O57"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
