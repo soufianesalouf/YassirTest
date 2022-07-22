@@ -10,6 +10,10 @@ import Combine
 
 class TrendingMoviesViewModel: BaseViewModel {
     
+    // MARK: - Properties
+    
+    var isLastPage: Bool = false
+    
     // MARK: - Published Properties
     
     @Published var success: Bool = false
@@ -27,13 +31,19 @@ class TrendingMoviesViewModel: BaseViewModel {
         self.apiService = apiService
         self.trendingMovies = trendingMovies ?? TrendingMovies(page: 1, movies: [], totalPages: 0)
         fetchPosterConfiguration()
-        fetchMovies()
+        fetchMovies(with: self.trendingMovies.page)
     }
     
     // MARK: - Public Interfaces
     
     var rowsCount: Int {
         trendingMovies.movies.count
+    }
+    
+    var shouldLoadMore: Bool = false {
+        didSet {
+            loadMore()
+        }
     }
     
     // MARK: - Functions
@@ -45,15 +55,25 @@ class TrendingMoviesViewModel: BaseViewModel {
     func getMovieID(atIndex index: Int) -> Int {
         trendingMovies.movies[index].id
     }
+    
+    // MARK: - Local Helpers
+    
+    private func loadMore() {
+        if !isLastPage {
+            isLastPage = trendingMovies.totalPages == trendingMovies.page
+            fetchMovies(with: trendingMovies.page + 1)
+        }
+    }
+    
 }
 
 // MARK: - Networking
 
 extension TrendingMoviesViewModel {
     
-    private func fetchMovies() {
+    private func fetchMovies(with page: Int) {
         
-        apiService.movies()
+        apiService.movies(page: page)
             .sink (receiveCompletion: { [weak self] completion in
                 
                 switch completion {
@@ -63,7 +83,8 @@ extension TrendingMoviesViewModel {
                     self?.error = error
                 }
             }, receiveValue: { [weak self] trendingMovies in
-                self?.trendingMovies = trendingMovies
+                self?.trendingMovies.page = trendingMovies.page
+                self?.trendingMovies.movies.append(contentsOf: trendingMovies.movies)
             }).store(in: &disposables)
     }
     

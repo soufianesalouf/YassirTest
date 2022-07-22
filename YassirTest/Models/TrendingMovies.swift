@@ -11,8 +11,8 @@ struct TrendingMovies: BaseModel {
     
     // MARK: - Properties
 
-    let page: Int
-    let movies: [Movie]
+    var page: Int
+    var movies: [Movie]
     let totalPages: Int
 
     // MARK: - Coding Keys

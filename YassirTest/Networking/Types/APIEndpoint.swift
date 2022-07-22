@@ -11,7 +11,7 @@ enum APIEndpoint {
     
     // MARK: - Cases
     
-    case movies
+    case movies(page: Int)
     case movieDetails(id: Int)
     case posterConfiguration
     
@@ -63,6 +63,8 @@ enum APIEndpoint {
         switch self {
         case .movieDetails:
             return [ "api_key": "\(Environment.apiKey)", "language": "en-US" ]
+        case let .movies(page: page):
+            return [ "api_key": "\(Environment.apiKey)", "page": "\(page)" ]
         default:
             return [ "api_key": "\(Environment.apiKey)" ]
         }

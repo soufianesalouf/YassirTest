@@ -24,7 +24,7 @@ class TrendingMoviesViewController: BaseViewController {
     private var disposables: Set<AnyCancellable> = []
     
     // MARK: - Life Cycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
@@ -101,5 +101,18 @@ extension TrendingMoviesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         didShowMovie?(viewModel.getMovieID(atIndex: indexPath.row))
     }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        // If we are at last cell load more content
+        if indexPath.row == viewModel.rowsCount - 1 && !viewModel.isLastPage {
+            viewModel.shouldLoadMore = true
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 190
+    }
+    
 }
 

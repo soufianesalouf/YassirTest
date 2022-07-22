@@ -12,7 +12,7 @@ protocol APIService {
 
     // MARK: - Properties
 
-    func movies() -> AnyPublisher<TrendingMovies, APIError>
+    func movies(page: Int) -> AnyPublisher<TrendingMovies, APIError>
     func movieDetails(id: Int) -> AnyPublisher<Movie, APIError>
     func posterConfiguration() -> AnyPublisher<Posters, APIError>
 

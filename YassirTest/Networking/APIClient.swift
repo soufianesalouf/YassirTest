@@ -12,8 +12,8 @@ final class APIClient: APIService {
     
     // MARK: - API Service
     
-    func movies() -> AnyPublisher<TrendingMovies, APIError> {
-        request(.movies)
+    func movies(page: Int) -> AnyPublisher<TrendingMovies, APIError> {
+        request(.movies(page: page))
     }
     
     func movieDetails(id: Int) -> AnyPublisher<Movie, APIError> {
