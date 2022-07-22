@@ -31,7 +31,7 @@ enum APIEndpoint {
     }
     
     private var url: URL {
-        Environment.apiBaseURL.appendingPathComponent(path)
+        BuildConfiguration.shared.apiBaseURL.appendingPathComponent(path)
     }
     
     private var path: String {
@@ -62,11 +62,11 @@ enum APIEndpoint {
     private var parameters: Parameters {
         switch self {
         case .movieDetails:
-            return [ "api_key": "\(Environment.apiKey)", "language": "en-US" ]
+            return [ "api_key": "\(BuildConfiguration.shared.apiKey)", "language": "en-US" ]
         case let .movies(page: page):
-            return [ "api_key": "\(Environment.apiKey)", "page": "\(page)" ]
+            return [ "api_key": "\(BuildConfiguration.shared.apiKey)", "page": "\(page)" ]
         default:
-            return [ "api_key": "\(Environment.apiKey)" ]
+            return [ "api_key": "\(BuildConfiguration.shared.apiKey)" ]
         }
     }
     

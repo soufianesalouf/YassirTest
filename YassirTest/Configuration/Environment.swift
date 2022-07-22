@@ -7,14 +7,13 @@
 
 import Foundation
 
-enum Environment {
-    
-    static var apiBaseURL: URL {
-        URL(string: "https://api.themoviedb.org/3/")!
-    }
-    
-    static var apiKey: String {
-        "c9856d0cb57c3f14bf75bdc6c063b8f3"
-    }
-    
+enum Environment: String {
+    case debugDev = "Debug DEV"
+    case releaseDev = "Release DEV"
+
+    case debugQA = "Debug QA"
+    case releaseQA = "Release QA"
+
+    case debugProd = "Debug PROD"
+    case releaseProd = "Release PROD"
 }

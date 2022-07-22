@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   PROD.plist
+   YassirTest
+
+   Created by Soufiane Salouf on 22/7/2022.
+   Copyright (c) 2022 ___ORGANIZATIONNAME___. All rights reserved.
+-->
+<plist version="1.0">
+<dict>
+    <key>apiBaseURL</key>
+    <string>https://api.themoviedb.org/3/</string>
+    <key>apiKey</key>
+    <string>c9856d0cb57c3f14bf75bdc6c063b8f3</string>
+</dict>
+</plist>
