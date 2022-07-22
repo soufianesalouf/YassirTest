@@ -26,7 +26,7 @@ struct MovieCellViewModel: BaseViewModel {
     }
     
     var releaseDate: String {
-        String(movie.releaseDate.prefix(4))
+        FormatterHelper.getYear(from: movie.releaseDate)
     }
     
     var image: String {

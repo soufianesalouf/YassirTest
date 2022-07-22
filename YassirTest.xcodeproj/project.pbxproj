@@ -47,6 +47,7 @@
 		72E01514288A2CAA00F98319 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E01513288A2CAA00F98319 /* Constants.swift */; };
 		72E01516288A2D9F00F98319 /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E01515288A2D9F00F98319 /* UserDefaults+Extension.swift */; };
 		72E0151C288A312F00F98319 /* ImageUrlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E0151B288A312F00F98319 /* ImageUrlBuilder.swift */; };
+		72E0151E288A3B7A00F98319 /* FormatterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E0151D288A3B7A00F98319 /* FormatterHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		72E01513288A2CAA00F98319 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		72E01515288A2D9F00F98319 /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 		72E0151B288A312F00F98319 /* ImageUrlBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUrlBuilder.swift; sourceTree = "<group>"; };
+		72E0151D288A3B7A00F98319 /* FormatterHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatterHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -383,6 +385,7 @@
 		72E0151A288A311200F98319 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				72E0151D288A3B7A00F98319 /* FormatterHelper.swift */,
 				72E0151B288A312F00F98319 /* ImageUrlBuilder.swift */,
 			);
 			path = Helpers;
@@ -496,6 +499,7 @@
 				72E01516288A2D9F00F98319 /* UserDefaults+Extension.swift in Sources */,
 				72E014F8288A110700F98319 /* NoContent.swift in Sources */,
 				72E01505288A1EC900F98319 /* MovieCell.swift in Sources */,
+				72E0151E288A3B7A00F98319 /* FormatterHelper.swift in Sources */,
 				72855803288A0E8500519355 /* APIService.swift in Sources */,
 				728557FB288A0BBD00519355 /* APIEndpoint.swift in Sources */,
 				72E01514288A2CAA00F98319 /* Constants.swift in Sources */,

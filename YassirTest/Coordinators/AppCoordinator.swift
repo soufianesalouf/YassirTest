@@ -44,7 +44,7 @@ class AppCoordinator {
         
         // Initialize and Configure Movie Detail View Controller
         let viewController = MovieDetailsViewController.instantiate()
-        let viewModel = MovieDetailsViewModel(movieID: movieID)
+        let viewModel = MovieDetailsViewModel(apiService: APIClient(), movieID: movieID)
 
         viewController.viewModel = viewModel
 
