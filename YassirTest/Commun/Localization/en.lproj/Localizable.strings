@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  YassirTest
+
+  Created by Soufiane Salouf on 22/7/2022.
+  
+*/
+
+// MARK: - Commun
+
+"EmptyString" = "";
+
+// MARK: - Buttons
+
+"button.ok" = "Ok";
+
+// MARK: - Errors
+
+"error.somethingHappened" = "An error occurred";

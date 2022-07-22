@@ -59,9 +59,9 @@ class TrendingMoviesViewController: BaseViewController {
             .store(in: &disposables)
         
         viewModel.$error
-            .sink{ error in
+            .sink{ [weak self] error in
                 guard let error = error else { return }
-                print("Error: \(error.localizedDescription)")
+                self?.showAlert(title: i18n.somethingHappenedError, message: error.localizedDescription, defaultAction: i18n.okButton)
             }
             .store(in: &disposables)
     }
