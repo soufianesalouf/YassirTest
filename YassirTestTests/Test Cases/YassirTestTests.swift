@@ -19,13 +19,11 @@ class YassirTestTests: XCTestCase {
     }
     
     func testTrendingMoviesViewModel() {
-        _ = TrendingMoviesViewModel()
+        _ = TrendingMoviesViewModel(apiService: APIClient())
     }
     
     func testMovieDetailsViewModel() {
-        let sut = MovieDetailsViewModel(movieID: 15)
-        
-        XCTAssertEqual(sut.movieID, 15)
+        _ = MovieDetailsViewModel(apiService: APIClient(), movieID: 15)
     }
 
 }

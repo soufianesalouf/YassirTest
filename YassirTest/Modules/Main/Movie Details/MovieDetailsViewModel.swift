@@ -24,9 +24,10 @@ class MovieDetailsViewModel: BaseViewModel, ObservableObject, Identifiable {
     
     // MARK: - Init
     
-    init(apiService: APIService, movieID: Int) {
+    init(apiService: APIService, movieID: Int, movie: Movie? = nil) {
         self.apiService = apiService
         self.movieID = movieID
+        self.movie = movie
         fetchMovieDetails()
     }
     

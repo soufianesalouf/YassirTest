@@ -22,7 +22,7 @@ class APIClientTests: XCTestCase {
         
         let expectation = self.expectation(description: "Fetch Movies")
 
-        apiClient.movies()
+        apiClient.movies(page: 1)
             .sink { completion in
                 switch completion {
                 case .finished:
