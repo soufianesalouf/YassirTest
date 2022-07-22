@@ -19,6 +19,10 @@ final class APIClient: APIService {
     func movieDetails(id: Int) -> AnyPublisher<Movie, APIError> {
         request(.movieDetails(id: id))
     }
+    
+    func posterConfiguration() -> AnyPublisher<Posters, APIError> {
+        request(.posterConfiguration)
+    }
 
     // MARK: - Helper Methods
 

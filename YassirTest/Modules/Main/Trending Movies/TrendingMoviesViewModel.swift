@@ -26,6 +26,7 @@ class TrendingMoviesViewModel: BaseViewModel {
     init(apiService: APIService, trendingMovies: TrendingMovies? = nil) {
         self.apiService = apiService
         self.trendingMovies = trendingMovies ?? TrendingMovies(page: 1, movies: [], totalPages: 0)
+        fetchPosterConfiguration()
         fetchMovies()
     }
     
@@ -63,6 +64,25 @@ extension TrendingMoviesViewModel {
                 }
             }, receiveValue: { [weak self] trendingMovies in
                 self?.trendingMovies = trendingMovies
+            }).store(in: &disposables)
+    }
+    
+    private func fetchPosterConfiguration() {
+        if appContext.isPosterConfigurationAvailable { return }
+        
+        APIClient().posterConfiguration()
+            .sink (receiveCompletion: { [weak self] completion in
+                
+                switch completion {
+                case .finished:
+                    appContext.isPosterConfigurationAvailable = true
+                    self?.success = true
+                case .failure(let error):
+                    appContext.isPosterConfigurationAvailable = false
+                    self?.error = error
+                }
+            }, receiveValue: { posterConfiguration in
+                appContext.posterConfiguration = posterConfiguration
             }).store(in: &disposables)
     }
     

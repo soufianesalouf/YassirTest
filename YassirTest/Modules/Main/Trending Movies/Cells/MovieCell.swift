@@ -15,7 +15,7 @@ class MovieCell: UITableViewCell {
     
     // MARK: - Views
     
-    @IBOutlet weak var movieImageView: UIImageView!
+    @IBOutlet weak var movieImageView: LoadableImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
@@ -24,7 +24,7 @@ class MovieCell: UITableViewCell {
     func configure(with viewModel: MovieCellViewModel) {
         nameLabel.text = viewModel.name
         dateLabel.text = viewModel.releaseDate
-        movieImageView.image = UIImage(named: viewModel.image)
+        movieImageView.loadImageUsing(urlString: viewModel.image, completion: nil)
     }
     
 }

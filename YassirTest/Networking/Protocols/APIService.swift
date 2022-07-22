@@ -14,5 +14,6 @@ protocol APIService {
 
     func movies() -> AnyPublisher<TrendingMovies, APIError>
     func movieDetails(id: Int) -> AnyPublisher<Movie, APIError>
+    func posterConfiguration() -> AnyPublisher<Posters, APIError>
 
 }

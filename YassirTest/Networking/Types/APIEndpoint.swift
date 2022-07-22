@@ -13,6 +13,7 @@ enum APIEndpoint {
     
     case movies
     case movieDetails(id: Int)
+    case posterConfiguration
     
     
     // MARK: - Properties
@@ -39,6 +40,8 @@ enum APIEndpoint {
             return "discover/movie"
         case let .movieDetails(id: id):
             return "/movie/\(id)"
+        case .posterConfiguration:
+            return "configuration"
         }
     }
     

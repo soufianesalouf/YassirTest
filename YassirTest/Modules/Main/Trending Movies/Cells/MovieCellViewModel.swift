@@ -30,7 +30,7 @@ struct MovieCellViewModel: BaseViewModel {
     }
     
     var image: String {
-        "imagePlaceholder"
+        ImageUrlBuilder.getUrl(with: movie.posterPath)
     }
     
 }
